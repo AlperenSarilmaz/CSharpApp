@@ -101,10 +101,21 @@ namespace Papatia
                             string qe = txtsorgu.Text;
                             SqlDataAdapter sdad = new SqlDataAdapter(qe, con);
                             DataSet dsd = new DataSet();
-                            sdad.Fill(dsd);
-                            dgvsorgu.DataSource = dsd;
-                            dgvsorgu.DataSource = dsd.Tables[0];
-                            con.Close();
+                            sdad.Fill(dsd); 
+                            if (dsd != null)
+                            {
+                                dgvsorgu.DataSource = dsd;
+                                MessageBox.Show(txtsorgu.Text + " Tamamlandı", "Başarılı");
+                            }
+                            if (dsd != null && dsd.Tables.Count > 0)
+                            {
+
+                                if (dsd.Tables[0].Rows.Count != 0)
+                                {
+                                    dgvsorgu.DataSource = dsd.Tables[0];
+                                }
+                            }
+                        con.Close();
 
                         }
                 }
