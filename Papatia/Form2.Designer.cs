@@ -38,6 +38,8 @@
             this.txtsorgu = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.cboDatabase = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsorgu)).BeginInit();
@@ -73,7 +75,7 @@
             this.btngiris.Location = new System.Drawing.Point(266, 3);
             this.btngiris.Name = "btngiris";
             this.btngiris.Size = new System.Drawing.Size(107, 41);
-            this.btngiris.TabIndex = 2;
+            this.btngiris.TabIndex = 0;
             this.btngiris.Text = "Çalıştır";
             this.btngiris.UseVisualStyleBackColor = false;
             this.btngiris.Click += new System.EventHandler(this.btngiris_Click);
@@ -110,6 +112,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(693, 2);
             this.dataGridView2.TabIndex = 17;
+            this.dataGridView2.TabStop = false;
             // 
             // dgvsorgu
             // 
@@ -121,7 +124,7 @@
             this.dgvsorgu.Location = new System.Drawing.Point(0, 0);
             this.dgvsorgu.Name = "dgvsorgu";
             this.dgvsorgu.Size = new System.Drawing.Size(634, 321);
-            this.dgvsorgu.TabIndex = 3;
+            this.dgvsorgu.TabIndex = 0;
             this.dgvsorgu.TabStop = false;
             // 
             // txtsorgu
@@ -133,7 +136,7 @@
             this.txtsorgu.Name = "txtsorgu";
             this.txtsorgu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtsorgu.Size = new System.Drawing.Size(628, 288);
-            this.txtsorgu.TabIndex = 1;
+            this.txtsorgu.TabIndex = 0;
             // 
             // splitContainer1
             // 
@@ -153,7 +156,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.dgvsorgu);
             this.splitContainer1.Size = new System.Drawing.Size(634, 670);
             this.splitContainer1.SplitterDistance = 345;
-            this.splitContainer1.TabIndex = 19;
+            this.splitContainer1.TabIndex = 1;
             this.splitContainer1.TabStop = false;
             // 
             // splitContainer2
@@ -177,12 +180,35 @@
             this.splitContainer2.TabIndex = 20;
             this.splitContainer2.TabStop = false;
             // 
+            // cboDatabase
+            // 
+            this.cboDatabase.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboDatabase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cboDatabase.FormattingEnabled = true;
+            this.cboDatabase.Location = new System.Drawing.Point(292, 34);
+            this.cboDatabase.Name = "cboDatabase";
+            this.cboDatabase.Size = new System.Drawing.Size(159, 25);
+            this.cboDatabase.TabIndex = 0;
+            this.cboDatabase.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(278, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Veritabanı Seçiniz";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(693, 760);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cboDatabase);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label2);
@@ -192,6 +218,7 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Papatia - Sql Sorgu Ekranı";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsorgu)).EndInit();
@@ -219,5 +246,7 @@
         private System.Windows.Forms.TextBox txtsorgu;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.ComboBox cboDatabase;
+        private System.Windows.Forms.Label label3;
     }
 }

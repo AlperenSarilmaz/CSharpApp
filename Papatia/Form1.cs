@@ -49,6 +49,8 @@ namespace Papatia
         //Hatırlatma komutu:
         private void Form1_Load(object sender, EventArgs e)
         {
+            comboBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
             if (Properties.Settings.Default.Sunucuadi != string.Empty)
             {
                 txtserver.Text = Properties.Settings.Default.Sunucuadi;
